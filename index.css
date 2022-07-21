@@ -1,0 +1,184 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*---   header section start   ---*/
+
+.navbar{
+    background-color: black;
+    width: 100%;
+    padding-top: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+.navbar .logo{
+    width: 300px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.navbar div{
+    margin-right: 100px; 
+}
+.navbar button{
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.navbar button span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.navbar button:hover span{
+    width: 100%;
+}
+
+.navbar .logout{
+    display: none;
+}
+
+
+/*---   header section end   ---*/
+
+/*---   features section start   ---*/
+
+h1{
+    font-size: 34px;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: #f67c92;
+    margin: 15px 0;
+}
+
+p{
+    font-size: 15px;
+    line-height: 18px;
+    color: #777;
+}
+
+.line-1{
+    width: 15px;
+    height: 15px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line-2{
+    width: 80px;
+    height: 1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line-3{
+    width: 60px;
+    height: 1px;
+    background: #f67c92;
+    display: inline-block;
+}
+.line{
+    line-height: 8px;
+}
+
+
+#about, #offer{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-left-col{
+    flex-basis: 50%;
+}
+.about-left-col img{
+    width: 100%;
+}
+.about-right-col{
+    flex-basis: 50%;
+    text-align: right;
+}
+.about-text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+.about-text p{
+    font-size: 20px;
+}
+.about-text h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+}
+.about-text h3{
+    font-size: 20px;
+    font-style: italic;
+    color: #797979;
+}
+
+
+#courses{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.course-right-col{
+    flex-basis: 50%;
+}
+.course-right-col img{
+    width: 100%;
+}
+.course-left-col{
+    flex-basis: 50%;
+    text-align: left;
+}
+.course-text{
+    max-width: 500px;
+    margin-left: 100px;
+    display: inline-block;
+}
+
+
+
+/*---   features section start   ---*/
+
+
+/*---   footer section start   ---*/
+
+.footer{
+    width: auto;
+    height: 50px;
+    background: rgb(31, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.copyright{ 
+    color: white; 
+    font-weight: bold;
+}
+
+/*---   footer section end   ---*/

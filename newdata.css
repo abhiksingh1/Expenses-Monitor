@@ -1,0 +1,96 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*---   header section start   ---*/
+
+.navbar{
+    background-color: black;
+    width: 100%;
+    padding-top: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+.navbar .logo{
+    width: 300px;
+    margin-left: 100px;
+    background-color: black;
+    cursor: pointer;
+}
+.navbar div{
+    margin-right: 100px; 
+}
+.navbar button{
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.navbar button span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.navbar button:hover span{
+    width: 100%;
+}
+
+/*---   header section end   ---*/
+
+
+#abc{
+    background-color: rgb(255, 255, 255);
+    padding-top: 15%;
+    padding-bottom: 10%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
+table, td {
+    border: 1px solid black;
+    height: 20px;
+}
+
+
+/*---   footer section start   ---*/
+
+.footer{
+    width: auto;
+    height: 50px;
+    background: rgb(31, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+}
+.copyright{ 
+    color: white; 
+    font-weight: bold;
+}
+
+/*---   footer section end   ---*/

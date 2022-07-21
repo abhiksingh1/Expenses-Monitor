@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Monitor</title>
+    <link rel="stylesheet" href="./home.css">
+    <!-- Material Ui -->
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="icon" type="image" href="./images/favicon.png">
+    
+</head>
+<body>
+    <!--      header section  start      -->
+
+    <section class="s-header">
+
+        <div class='navbar'>
+            <img src="./images/logo.png" class='logo' alt='logo'></img>
+            <div>
+                <button type='button' onclick="window.location.href='logout.php'"><span></span>Log Out</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <!--      header section  end      -->
+
+
+   <!--      features section  start      -->
+
+   <section class="s-path">
+       <div class="path">
+            <div class="card">
+                <img src="./images/datastore.jpg" alt="Store Data">
+                <div class="container">
+                    <h4><b>Note:</b></h4> 
+                    <p>For entering new expenses data(int tabular form) click the button below.</p> 
+                    <button class="btn" onclick="window.location.href='newdata.html'"><span><i class = "material-icons">edit_note</i></span>Enter New Data</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/charttypes.jpg" alt="Chart Types">
+                <div class="container">
+                    <h4><b>Note:</b></h4> 
+                    <p>For viewing your all expenses in different chart form click the button below.</p> 
+                    <button class="btn" onclick="window.location.href='viewchart.php'"><span><i class = "material-icons">query_stats</i></span>View Chart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/downloadtable.png" alt="Download Table Data">
+                <div class="container">
+                    <h4><b>Note:</b></h4> 
+                    <p>For downloading or viewing existing data in different file format click below. </p> 
+                    <button class="btn" onclick="window.location.href='downloadtable.php'"><span><i class = "material-icons">sim_card_download</i></span>Download Table</button>
+                </div>
+            </div>
+       </div>
+       
+   </section>
+
+    <!--      features section  end      -->
+
+
+    <!--      footer section  start      -->
+    <section class="s-footer">
+        <div class="footer">
+           <p class="copyright"> Made with &#10084;&#65039; by Abhimanyu </p>
+        </div>
+    </section>
+    <!--      footer section  end      -->
+</body>
+</html>

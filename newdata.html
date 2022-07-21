@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Monitor</title>
+    <link rel="stylesheet" href="./newdata.css">
+    <!-- Material Ui -->
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="icon" type="image" href="./images/favicon.png">
+
+    <style>
+        td{
+            height: 30px;
+        }
+        input, select{
+            height: 80%;
+            width: 100%;
+            font-size: 20px;
+            color: green;
+            text-align: center;
+        }
+        tr:hover {
+            background-color: rgb(255, 0, 0);
+        }
+        
+        .btn{
+            width: 150px;
+            height: 40px;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            border: 3px solid #009688;
+            font-weight: bold;
+        }
+        .btn:hover{
+            background-color: #009688;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <section class="s-header">
+
+        <div class='navbar'>
+            <img src="./images/logo.png" class='logo' alt='logo' onclick="window.location.href='home.html'"></img>
+            <div>
+                <button type='button' onclick="window.location.href='logout.php'"><span></span>Log Out</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <center>
+        <section id="abc">
+
+            <h2>Enter your expense data!</h2>
+            <form action="newdata.php" method="POST" id="form_test">
+                <table id="tablee" style="width:100%">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td id="item"><input type="text" name="item[]" placeholder="Item"></td>
+                        <td autofocus id="category"><select name="category[]">
+                                <option value="Other">Other</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Cosmetic">Cosmetic</option>
+                                <option value="Clothes">Clothes</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Jewellary">Jewellary</option>
+                                <option value="Stationary">Stationary</option>
+                                <option value="Automobile">Automobile</option>
+                            </select></td>
+                        <td id="quantity"><input type="number" name="quantity[]" placeholder="Quantity"></td>
+                        <td id="rate"><input type="number" name="rate[]" placeholder="Rate"></td>
+                        <td id="total"><input type="number" name="total[]" placeholder="Total"></td>
+                    </tr>
+                </table>
+            </form>
+            <button class="btn" onclick="create_row()"><span></span>Create more row!</button>
+            <button class="btn" onclick="delete_row()"><span></span>Delete row!</button>
+            <button class="btn" type="submit" form="form_test" name="submit" value="Submit"><span></span>Save data!</button>
+    
+        </section>
+    </center>
+    
+    <!--      footer section  start      -->
+    <section class="s-footer">
+        <div class="footer">
+           <p class="copyright"> Made with &#10084;&#65039; by Abhimanyu </p>
+        </div>
+    </section>
+    <!--      footer section  end      -->
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+    var i = 1;
+   
+    function create_row() {
+        i = i+1;
+        var table = document.getElementById("tablee");
+        var row = table.insertRow(i);
+      
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+
+        var a = document.getElementById("item").innerHTML;
+        var b = document.getElementById("category").innerHTML;
+        var c = document.getElementById("quantity").innerHTML;
+        var d = document.getElementById("rate").innerHTML;
+        var e = document.getElementById("total").innerHTML;
+
+        cell1.innerHTML = a;
+        cell2.innerHTML = b;
+        cell3.innerHTML = c;
+        cell4.innerHTML = d;
+        cell5.innerHTML = e;
+
+    }
+
+    function delete_row() {
+        if (i > 1) {
+        document.getElementById("tablee").deleteRow(i);
+            i = i - 1;
+        }
+    }
+    </script>
+</body>
+</html>
